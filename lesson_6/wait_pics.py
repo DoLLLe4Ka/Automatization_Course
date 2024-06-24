@@ -10,7 +10,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.get('https://bonigarcia.dev/selenium-webdriver-java/loading-images.html')
 waiter = WebDriverWait(driver, 10)
 waiter.until(
-    EC.text_to_be_present_in_element((By.CSS_SELECTOR, '.col-12.py-2'), 'Done!')
+    EC.text_to_be_present_in_element((By.CSS_SELECTOR, '#text'), 'Done!')
 )
 pic3 = driver.find_element(By.CSS_SELECTOR, '#award')
 src = pic3.get_attribute('src')
