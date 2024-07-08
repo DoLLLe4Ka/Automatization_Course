@@ -22,7 +22,7 @@ def test_calculator(driver):
     driver.find_element(By.XPATH, '//span[contains(text(), "=")]').click()
 
     waiter = WebDriverWait(driver, 45, 0.1)
-    # Код не отрабатывает со значением 45 секунд, отрабатывает со значением 45.1
+  
     result = waiter.until(
     EC.text_to_be_present_in_element((By.CSS_SELECTOR, 'div.screen'), '15')
     )
