@@ -49,10 +49,26 @@ class EmployeeApi:
         resp = requests.post(self.url + '/employee',
                              json=employee, headers=my_headers)
         return resp.json()
+    
+    def add_employee_no_token(self, name, last_name, middle_name, companyId, e_email, url, phone, birthdate, isActive):
+        employee = {
+        "firstName": name,
+        "lastName": last_name,
+        "middleName": middle_name,
+        "companyId": companyId,
+        "email": e_email,
+        "url": url,
+        "phone": phone,
+        "birthdate": birthdate,
+        "isActive": isActive
+        }
+
+        resp = requests.post(self.url + '/employee', json=employee)
+        return resp.json()
 
     def get_employee_by_id(self, id):
         resp = requests.get(self.url+ '/employee/'+ str(id))
-        return resp.json()
+        return resp.json()      
     
     def edit_employee(self, last_name, email, url, phone, isActive, id):
         employee = {
