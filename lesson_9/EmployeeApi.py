@@ -2,6 +2,7 @@ import requests
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
 
+
 class EmployeeApi:
     def __init__(self, url) -> None:
         self.url = url
