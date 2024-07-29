@@ -1,0 +1,5 @@
+calculator_url = "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
+form_url = "https://bonigarcia.dev/selenium-webdriver-java/data-types.html"
+main_url = "https://www.saucedemo.com/"
+cart_url = "https://www.saucedemo.com/cart.html"
+url = "https://x-clients-be.onrender.com"
