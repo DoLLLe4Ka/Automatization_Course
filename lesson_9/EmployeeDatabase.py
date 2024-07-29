@@ -53,7 +53,7 @@ class EmployeeTable:
         return self.__db.execute(self.__scripts["get max id"]).fetchall()[0][0]
     
     def delete(self, id):
-        self.__db.execute(self.__scripts["delete by id"], {"id_to_delete": id})
+        self.__db.execute(self.__scripts["delete company by id"], {"id_to_delete": id})
     
     def delete_employee(self, id):
-        self.__db.execute(self.__scripts["delete by id"], {"id_to_delete": id})
+        self.__db.execute(self.__scripts["delete employee by id"], {"id_to_delete": id})
